@@ -110,15 +110,10 @@ Tree based methods, for which we split the sample into two or more sets based on
 ![alt text](./images/acc.png)   
 
   
-![alt text](./images/DecisionTreeConfusionMatrix.png)   
+![alt text](./images/conf_matrix_results.png)   
 
 
   
-![alt text]("./images/RandomForestConfusionMatrix.png")   
-
-
-  
-![alt text]("./images/SVMConfusionMatrix.png")   
 
 
 From the above results we can see that the Random Forest Classifier model performs better compared to other models.  
