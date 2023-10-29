@@ -134,6 +134,8 @@ Lack of some of features such as:
 
 
 
+I would like to thank Minh, Aisha who have worked with me in this project.  
+
 
 
 
