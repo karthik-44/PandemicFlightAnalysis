@@ -89,7 +89,7 @@ We considered below machine learning methods and plotted the AUC curve and also 
 3. Support Vector Machine Classifier
 
 **Hyper-parameters Tuning**  
-\t Tree based methods, for which we split the sample into two or more sets based on most significant splitter from the input features. We saw how each successive split adds some complexity to the model, which can be used to make better predictions in many cases.  
+&nbsp;&nbsp;&nbsp;&nbsp;Tree based methods, for which we split the sample into two or more sets based on most significant splitter from the input features. We saw how each successive split adds some complexity to the model, which can be used to make better predictions in many cases.  
 
 1. Decision Tree
 - We use grid search method to find the best max_depth parameter.
