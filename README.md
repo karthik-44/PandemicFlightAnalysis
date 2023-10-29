@@ -70,6 +70,7 @@ It is useful for calculation of metrics such as sensitivity, specificity, precis
 ![alt text](./images/cf_matrix.png)   
 
 **AUC(Area Under the Curve)**  
+
 Provides an aggregate measure of performance across all possible classification thresholds. 
 It tells how much the model is capable of distinguishing between classes and shows the probability that the model ranks a random positive example more highly than a random negative example.
 The value of AUC is between 0 to 1. Higher the value, better the performance of the model.
