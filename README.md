@@ -15,7 +15,7 @@ flights to minimize the pandemic spread and maximize the profits of airlines whi
 - Collect the data and split the data into training and testing datasets.
 - Train with the classifier models such as SVM, Decision Tree, Random Forest using the training set. (Considered cross validation for hyper-parameter tuning)
 - Evaluate the testing set using the trained classifier models.
-- Plot ROC to measure the performance of the model. Measured other performance metrics such as sensitivity, specificity, true positive rate etc.,.
+- Plot ROC to measure the performance of the model. Measure other performance metrics such as sensitivity, specificity, true positive rate etc.,.
 
 ## Data 
 
@@ -26,21 +26,21 @@ Below are the attributes:
 
 
 ## Preprocessing
-Checked for missing values and removed the rows where there is a NA value. (around 2%)
-Identified the top 3 airports in each state based on number of flights that travel from that airport in the year. 
+- Checked for missing values and removed the rows where there is a NA value(around 2%).
+- Identified the top 3 airports in each state based on number of flights that travel from that airport in the year. 
 airport_label with value of 1 indicating the popularity of the airport.
-From these most popular airports, we identified the flights to top 3 destinations.
+- From these most popular airports, we identified the flights to top 3 destinations.
 flight_label with a value of 1 indicating the popularity of the flight.
 
 
 In 2020, there are 142 airports and there are 224 distinct flights from these airports considered as important.
 In 2021, there are 143 airports and there are 214 distinct flights from these airports considered as important.
 
-Sub sampling: Our data has a huge imbalance of important and non-important flights (36622 vs 458142). So, we selected a smaller subset of the original data. We understood how the subset is specified by choosing a parameter n, specifying the size of the subset.  
+**Sub sampling:** Our data has a huge imbalance of important and non-important flights (36622 vs 458142). So, we selected a smaller subset of the original data. We understood how the subset is specified by choosing a parameter n, specifying the size of the subset.  
 
 ![alt text](./images/train_test.png)  
 
-Cross-validation, that was used to divide our dataset into random groups, holding one group out as the test, while training the model on the remaining groups. We learned that this process is repeated for each group being held as the test group, then the average of the models are used for the resulting model.
+**Cross-validation,** was used to divide our dataset into random groups, holding one group out as the test, while training the model on the remaining groups. We learned that this process is repeated for each group being held as the test group, then the average of the models are used for the resulting model.
 
 ## Metrics
 **ROC (Receiver Operating Characteristic) curve** is a graph that measures the performance of a classification model at all various thresholds. 
