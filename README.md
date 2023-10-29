@@ -110,7 +110,7 @@ Tree based methods, for which we split the sample into two or more sets based on
 ![alt text](./images/acc.png)   
 
   
-![alt text]("./images/Decision Tree Confusion Matrix.png")   
+![alt text](./images/Decision Tree Confusion Matrix.png)   
 
 
   
