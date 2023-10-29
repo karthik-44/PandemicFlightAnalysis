@@ -16,7 +16,7 @@ flights to minimize the pandemic spread and maximize the profits of airlines whi
 We have collected the data from Bureau of transportation mainly for years 2020, 2021.  
 Below are the attributes:  
 
-![alt text](./images/attribures.png)  
+![alt text](./images/attributes.png)  
 
 
 
@@ -39,14 +39,18 @@ In 2021, there are 143 airports and there are 214 distinct flights from these ai
 - Plot ROC to measure the performance of the model. Measured other performance metrics such as sensitivity, specificity, true positive rate etc.,.
 
 
-Sub sampling: Our data has a huge imbalance of important and non-important flights (36622 vs 458142). So, we selected a smaller subset of the original data. We understood how the subset is specified by choosing a parameter n, specifying the size of the subset.
+Sub sampling: Our data has a huge imbalance of important and non-important flights (36622 vs 458142). So, we selected a smaller subset of the original data. We understood how the subset is specified by choosing a parameter n, specifying the size of the subset.  
+
+
+![alt text](./images/train_test.png)  
+
+
 Cross-validation, that was used to divide our dataset into random groups, holding one group out as the test, while training the model on the remaining groups. We learned that this process is repeated for each group being held as the test group, then the average of the models are used for the resulting model.
-Tree based methods, for which we split the sample into two or more sets based on most significant splitter from the input features. We saw how each successive split adds some complexity to the model, which can be used to make better predictions in many cases.  
 
 ## Metrics
 **ROC (Receiver Operating Characteristic) curve** is a graph that measures the performance of a classification model at all various thresholds. 
 
-**This curve plots three things: **
+**This curve plots three things:**
 1. True Positive Rate (TPR)
 2. False Positive Rate (FPR)
 3. Thresholds (implicitly)
@@ -68,9 +72,18 @@ It is useful for calculation of metrics such as sensitivity, specificity, precis
 3) False Negatives(FN): Model predicts No when the original label was Yes.
 4) True Negatives(TN): Model predicts No when the original label was No.
 
-![alt text](./images/cf_matrix)
+![alt text](./images/cf_matrix.png)   
+
+**AUC(Area Under the Curve)**  
+Provides an aggregate measure of performance across all possible classification thresholds. 
+It tells how much the model is capable of distinguishing between classes and shows the probability that the model ranks a random positive example more highly than a random negative example.
+The value of AUC is between 0 to 1. Higher the value, better the performance of the model.
+**Scale-invariant:** It measures how well predictions are ranked, rather than their absolute values. This could lead to a problem where we need a well calibrated probability.
+**Classification-threshold-invariant:** It measures the quality of the model's predictions irrespective of what classification threshold is chosen. So, in a condition where you want to minimize the False Positive Rate (spam detection), the AUC can not be a good metric for this situation.
 
 Hyper-parameters Tuning
+Tree based methods, for which we split the sample into two or more sets based on most significant splitter from the input features. We saw how each successive split adds some complexity to the model, which can be used to make better predictions in many cases.  
+
 1. Decision Tree
 - We use grid search method to find the best max_depth parameter.
 - The higher the max_depth the higher the accuracy, however, it can lead to overfit.
@@ -78,5 +91,28 @@ Hyper-parameters Tuning
 2. Random Forest Tree
 - We use grid search method to find the best max_samples parameter.
 - Max_samples indicates the number of samples to draw from X to train each base estimator.
+
+
+## Results  
+
+We considered below machine learning methods and plotted the AUC curve and also measured the accuracy, f1-score, auc scores.  
+
+1. Decision Tree Classifier
+2. Random Forest Classifier
+3. Support Vector Machine Classifier
+
+
+![alt text](./images/roc.png)  
+
+
+![alt text](./images/acc.png)  
+
+
+From the above results we can see that the Random Forest Classifier model performs better compared to other models.  
+
+
+
+
+
 
 
